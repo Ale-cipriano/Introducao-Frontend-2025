@@ -11,6 +11,9 @@ function App() {
     nome: 'Morty Smith',
     imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
   }
+
+  const itens = [item1, item2]
+
   return (
     <>
     <Card item={item1} />
