@@ -16,9 +16,9 @@ function App() {
 
   return (
     <>
-    <Card item={item1} />
-    <Card item={item2} />
-       
+    {itens.map(function (item) {
+      return <Card item={item}/>
+    })}
     </>
   )
 }
