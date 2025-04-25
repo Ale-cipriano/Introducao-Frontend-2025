@@ -1,18 +1,20 @@
+
 import Tag from "../Tag/Tag";
 import "./Card.css"
 
 export default function Card(props) {
     const item = props.item;
+
+    const tags = item.tags || [];
     
     return <div className="card">
         <h2>{item.nome}</h2>
 
-        <div  className="tags">
-          <Tag />
-          {/* <div className="tag">Status: vivo</div>
-          <div className="tag">Espécie: Humana</div>
-          <div className="tag">Origem: Terra C-137 </div>  */}  
-        </div>
+        <div className="tags">
+      {tags.map(function (tag, index) {
+        return <Tag text={tag} key={`card_tag_${index}`} />
+      })}
+    </div>
         
         <img src={item.imagemUrl} />              
       </div>  
