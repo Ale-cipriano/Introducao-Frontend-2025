@@ -9,7 +9,8 @@ export default function Tag(props) {
 
     /*
     Return -> Encerra a função
-    no ReactJS o terturn precisa devolver um componente JSX para ser exibido na tela.
+    No ReactJS, o return precisa devolver um componente JSX para ser
+    exibido na tela
     */
 
     return <div className="tag">{text}</div>
