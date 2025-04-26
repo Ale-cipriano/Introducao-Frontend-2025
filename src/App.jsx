@@ -20,25 +20,24 @@ function App() {
 
   const results = json.results
 
-  console.log(results)
   setItens(results)
   }
  
   /* useEffect recebe 2 informações:
-    1. função contendo o efeito que será protegido pelo useEffect;
+    1. função contendo o código que será protegido pelo useEffect;
     2. dependências que controlam  e executam useEffect. Array vazio para executar apenas 1 vez. */
   
   useEffect(function () {
     carregarDadosApi()
   }, []) 
 
-  console.log('Renderizando o componente')
-
   return (
     <>
-    {itens.map(function (item, index) {
-      return <Card item={item} key={'card_${index}'} />
-    })}
+   <div className="card-list">
+        {itens.map(function (item, index) {
+          return <Card item={item} key={`card_${index}`} />
+        })}
+      </div>
     </>
   )
 }
