@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Card from './components/Card/Card'
+import Header from './components/Header/Header'
 
 function App() {
   
@@ -33,7 +34,8 @@ function App() {
 
   return (
     <>
-   <div className="card-list">
+    <Header />
+      <div className="card-list">
         {itens.map(function (item, index) {
           return <Card item={item} key={`card_${index}`} />
         })}
